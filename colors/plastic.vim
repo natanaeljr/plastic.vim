@@ -48,9 +48,10 @@ let s:black = { 'gui': '#181a1f', 'cterm256': '234'}
 let s:visual_black = { 'gui': 'NONE', 'cterm256': 'NONE'}
 let s:background = {'gui': '#21252b', 'cterm256': '235'}
 let s:foreground = {'gui': '#a9b2c3', 'cterm256': '235'}
-let s:grey = { 'gui': '#abb2bf', 'cterm256': '59' }
+let s:grey = { 'gui': '#5e6673', 'cterm256': '246' }
 let s:punctuation = { 'gui': '#7c8696', 'cterm256': '238' }
 let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
+let s:bg_high = {'gui': '#272c33', 'cterm256': '236' }
 
 " }}}
 
@@ -64,16 +65,16 @@ call <sid>hi('Normal', s:white, s:background, 'none', {})
 call <sid>hi('Cursor', s:none, s:none, 'inverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
-call <sid>hi('CursorLine', s:white, s:none, 'bold', {})
+call <sid>hi('CursorLine', s:none, s:bg_high, 'none', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
 call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
 call <sid>hi('ColorColumn', s:none, s:punctuation, 'none', {})
-call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
-call <sid>hi('SignColumn', s:none, s:background, 'none', {})
-call <sid>hi('VertSplit', s:grey, s:background, 'none', {})
-call <sid>hi('LineNr', s:punctuation, s:background, 'none', {})
-call <sid>hi('CursorLineNr', s:punctuation, s:background, 'none', {})
+call <sid>hi('FoldColumn', s:punctuation, s:bg_high, 'none', {})
+call <sid>hi('SignColumn', s:none, s:bg_high, 'none', {})
+call <sid>hi('VertSplit', s:grey, s:bg_high, 'none', {})
+call <sid>hi('LineNr', s:punctuation, s:bg_high, 'none', {})
+call <sid>hi('CursorLineNr', s:punctuation, s:bg_high, 'none', {})
 
 call <sid>hi('DiffAdd', s:black, s:green, 'none', {})
 call <sid>hi('DiffChange', s:black, s:purple, 'none', {})
@@ -109,14 +110,14 @@ call <sid>hi('StatusLineNC', s:white, s:background, 'none', {})
 hi link StatusLineTerm StatusLine
 hi link StatusLineTermNC StatusLineNC
 
-call <sid>hi('TabLine', s:white, s:black, 'none', {})
-hi link TabLineFill TabLine
-call <sid>hi('TabLineSel', s:whisky, s:black, 'none', {})
+call <sid>hi('TabLine', s:bg_high, s:background, 'none', {})
+call <sid>hi('TabLineFill', s:punctuation, s:background, 'none', {})
+call <sid>hi('TabLineSel', s:white, s:bg_high, 'none', {})
 
 call <sid>hi('Title', s:white, s:none, 'none', {})
 call <sid>hi('Visual', s:black, s:white, 'none', {})
 hi link VisualNOS Visual
-call <sid>hi('TabLine', s:white, s:black, 'none', {})
+call <sid>hi('TabLine', s:bg_high, s:background, 'none', {})
 call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
 "}}}
 
@@ -140,11 +141,17 @@ call <sid>hi('Function', s:whisky, s:none, 'none', {})
 call <sid>hi('Statement', s:whisky, s:none, 'none', {})
 hi link Conditional Statement
 
-call <sid>hi('PreProc', s:aqua, s:none, 'none', {})
+call <sid>hi('Operator', s:red, s:none, 'none', {})
+
+call <sid>hi('Keyword', s:red, s:none, 'none', {})
+
+call <sid>hi('PreProc', s:red, s:none, 'none', {})
 
 call <sid>hi('Type', s:blue, s:none, 'none', {})
 
 call <sid>hi('Special', s:aqua, s:none, 'none', {})
+
+hi link Delimiter Special
 
 call <sid>hi('Underlined', s:blue, s:none, 'underline', {})
 
@@ -152,7 +159,7 @@ call <sid>hi('Ignore', s:none, s:none, 'none', {})
 
 call <sid>hi('Error', s:red, s:black, 'undercurl', {})
 
-call <sid>hi('Todo', s:aqua, s:none, 'italic', {})
+call <sid>hi('Todo', s:grey, s:none, 'bold', {})
 
 "}}}
 
