@@ -75,7 +75,7 @@ call <sid>hi('FoldColumn', s:punctuation, s:bg_high, 'none', {})
 call <sid>hi('SignColumn', s:none, s:bg_high, 'none', {})
 call <sid>hi('VertSplit', s:grey, s:bg_high, 'none', {})
 call <sid>hi('LineNr', s:punctuation, s:bg_high, 'none', {})
-call <sid>hi('CursorLineNr', s:punctuation, s:bg_high, 'none', {})
+call <sid>hi('CursorLineNr', s:foreground, s:bg_high, 'none', {})
 
 call <sid>hi('DiffAdd', s:black, s:green, 'none', {})
 call <sid>hi('DiffChange', s:black, s:purple, 'none', {})
