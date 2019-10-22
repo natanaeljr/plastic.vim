@@ -52,6 +52,7 @@ let s:grey = { 'gui': '#5e6673', 'cterm256': '246' }
 let s:punctuation = { 'gui': '#7c8696', 'cterm256': '238' }
 let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 let s:bg_high = {'gui': '#272c33', 'cterm256': '236' }
+let s:bg_higher = {'gui': '#333942', 'cterm256': '236' }
 
 " }}}
 
@@ -115,7 +116,7 @@ call <sid>hi('TabLineFill', s:punctuation, s:background, 'none', {})
 call <sid>hi('TabLineSel', s:white, s:bg_high, 'none', {})
 
 call <sid>hi('Title', s:white, s:none, 'none', {})
-call <sid>hi('Visual', s:black, s:white, 'none', {})
+call <sid>hi('Visual', s:none, s:bg_higher, 'none', {})
 hi link VisualNOS Visual
 call <sid>hi('TabLine', s:bg_high, s:background, 'none', {})
 call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
@@ -126,7 +127,7 @@ call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
 " http://vimdoc.sourceforge.net/htmldoc/syntax.html
 "----------------------------------------------------
 " {{{
-call <sid>hi('Comment', s:grey, s:none, 'italic', {})
+call <sid>hi('Comment', s:grey, s:none, 'none', {})
 
 call <sid>hi('Constant', s:aqua, s:none, 'none', {})
 call <sid>hi('String', s:green, s:none, 'none', {})
