@@ -292,3 +292,8 @@ hi link typescriptDefault              typescriptImport
 " }}}
 
 " vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:
+
+hi GitGutterAdd guifg=#a1bf78 guibg=#272c33 guisp=NONE gui=NONE cterm=NONE
+hi GitGutterChange guifg=#73b3e7 guibg=#272c33 guisp=NONE gui=NONE cterm=NONE
+hi GitGutterDelete guifg=#ed6161 guibg=#272c33 guisp=NONE gui=NONE cterm=NONE
+hi GitGutterChangeDelete guifg=#dbb774 guibg=#272c33 guisp=NONE gui=NONE cterm=NONE
